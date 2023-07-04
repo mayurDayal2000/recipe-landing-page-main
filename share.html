@@ -1,0 +1,161 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="English">
+    <meta name="author" content="Mayur">
+    <title>Recipe Revolution | Submit your recipes</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Unica+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css" />
+
+    <script defer>
+        function handleSubmit(event) {
+            event.preventDefault();
+            location.href = "/";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="primary-navigation">
+                <div class="brand-text">
+                    <a href="/" class="nav-link">Recipes</a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="/index.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#browse" class="nav-link">Browse</a>
+                    </li>
+
+                    <li>
+                        <a href="/share.html" class="nav-link">Submit</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="share-section">
+                <h1>Easy Peasy Submission</h1>
+
+                <p class="text-white">
+                    Submitting your recipes is as simple as slicing through butter. Just
+                    fill out our user-friendly form with your ingredients, steps, and a
+                    mouth-watering photo to show off your culinary skills.
+                </p>
+
+                <form action="./index.html" method="post" class="share-form" onsubmit="handleSubmit(event)">
+                    <div class="input-group">
+                        <label for="recipe_name">Recipe Name:</label>
+                        <input type="text" name="recipe_name" id="recipe_name" placeholder="Maggi Noodles" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ingredients">Ingredients:</label>
+                        <textarea id="ingredients" name="ingredients" rows="3"
+                            placeholder="1 pack of Maggi noodles, 2 cups of water, Maggi masala (included in the pack)"
+                            required></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="instructions">Instructions:</label>
+                        <textarea id="instructions" name="instructions" rows="8"
+                            placeholder="i) Boil 2 cups of water in a saucepan. ii) Once the water starts boiling, add the Maggi noodles and cook for 2 minutes, stirring occasionally. iii) Add the Maggie masala in the saucepan. iv) Mix everything and cook for 2 minutes. v) Your delicious Maggi noodles are now ready to be enjoyed!"
+                            required></textarea>
+                    </div>
+
+                    <div class="input-group input-grid">
+                        <div>
+                            <label for="cook_time">Cook Time (in minutes):</label>
+                            <input type="number" name="cook_time" id="cook_time" placeholder="5 minutes" required
+                                min="0" />
+                        </div>
+
+                        <div>
+                            <label for="recipe_img">Image URL:</label>
+                            <input type="url" name="recipe_img" id="recipe_img" placeholder="maggie_noddle.png"
+                                required />
+                        </div>
+                    </div>
+
+                    <button type="submit" onsubmit="handleSubmit(event)">Submit Recipe</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <!-- other links -->
+            <nav class="other-links">
+                <div class="nav-group">
+                    <h3>Browse</h3>
+                    <ul>
+                        <li><a href="#appetizers">Appetizers</a></li>
+                        <li><a href="#main">Main</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-group">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#fb">Facebook</a></li>
+                        <li><a href="#insta">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-group">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#terms">Terms</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- social links -->
+            <nav class="social-links">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/twitter-icon.svg" alt="twitter icon" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/insta-icon.svg" alt="instagram icon" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/fb-icon.svg" alt="facebook icon" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/twitch-icon.svg" alt="twitch icon" />
+                        </a>
+                    </li>
+                </ul>
+
+                <p>&copy; Recipe Revolution 2023</p>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
